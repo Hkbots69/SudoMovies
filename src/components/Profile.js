@@ -25,7 +25,7 @@ export default function Profile() {
       "auth-token": localStorage.getItem("token"),
     };
 
-    let response = await fetch("http://18.234.35.72/api/auth/getuser", {
+    let response = await fetch("https://sudomovies.ml/api/auth/getuser", {
       method: "GET",
       headers: headersList,
     });
@@ -44,7 +44,7 @@ export default function Profile() {
       "auth-token": localStorage.getItem('token')
      }
      
-     let response = await fetch("http://18.234.35.72/api/tokens/addtoken/50", { 
+     let response = await fetch("https://sudomovies.ml/api/tokens/addtoken/50", { 
        method: "PUT",
        headers: headersList
      });

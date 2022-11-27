@@ -26,7 +26,7 @@ const Login = () => {
        "passwd": loginData.passwd
      });
      
-     let response = await fetch("http://18.234.35.72/api/auth/login", { 
+     let response = await fetch("https://sudomovies.ml/api/auth/login", { 
        method: "POST",
        body: bodyContent,
        headers: headersList
