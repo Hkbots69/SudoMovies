@@ -24,7 +24,7 @@ const Dashboard = () => {
 
     let data = await response.json();
 
-    if (data.success) {
+    if (data.success || !data.adult ) {
       document.getElementById("msg").innerHTML = "Movie Added"
     } else {
       document.getElementById("msg").innerHTML = data.error;
