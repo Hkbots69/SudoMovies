@@ -3,6 +3,7 @@ import { MdArrowBack } from "react-icons/md";
 import { FiExternalLink } from "react-icons/fi";
 import { BsStarHalf } from "react-icons/bs";
 import "react-tuby/css/main.css";
+import "./video-react.css";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -73,10 +74,10 @@ const Details = () => {
     <span id="error" className="aline"></span>
     <div id="view">
       <div className="mt-5">
-        <link
+        {/* <link
           rel="stylesheet"
           href="https://video-react.github.io/assets/video-react.css"
-        />
+        /> */}
 
         <Player poster={purl}>
           <source src={murl} />
