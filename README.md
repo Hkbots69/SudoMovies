@@ -11,6 +11,10 @@ Smooth filtering of the movie category is possible thanks to framer motion libra
 
 ![](./screenshot.jpg)
 
+![image](https://user-images.githubusercontent.com/74814143/206721082-3e01d41f-b6db-4750-b503-2ed29bb1854d.png)
+
+![image](https://user-images.githubusercontent.com/74814143/206721454-3c2d8818-18a3-4a96-a95e-45e11dc591b3.png)
+
 ![image](https://user-images.githubusercontent.com/74814143/206719676-c25d9206-4f19-4061-bf74-66a59f969df6.png)
 
 ![image](https://user-images.githubusercontent.com/74814143/206720020-30a32e8f-7647-41a0-99f6-4108306db634.png)
@@ -30,6 +34,11 @@ Project is created with:
 - React Hooks
 - React Router
 - The Movie Database (TMDB) API
+
+## Requirement
+
+- MongoDB
+- Node.js
 
 ## Setup
 
