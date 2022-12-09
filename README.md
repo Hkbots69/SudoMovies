@@ -13,6 +13,8 @@ Smooth filtering of the movie category is possible thanks to framer motion libra
 
 ![image](https://user-images.githubusercontent.com/74814143/206721082-3e01d41f-b6db-4750-b503-2ed29bb1854d.png)
 
+![image](https://user-images.githubusercontent.com/74814143/206725749-b61bcc40-889e-4931-8f33-d1674b01c9f3.gif)
+
 ![image](https://user-images.githubusercontent.com/74814143/206721454-3c2d8818-18a3-4a96-a95e-45e11dc591b3.png)
 
 ![image](https://user-images.githubusercontent.com/74814143/206719676-c25d9206-4f19-4061-bf74-66a59f969df6.png)
