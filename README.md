@@ -46,11 +46,18 @@ Project is created with:
 
 To run this project, install it locally using npm:
 
+
+For Frontend 
 ```
 $ cd SudoMovies
 $ npm install
 $ npm start
-$ cd Backend
+```
+
+For Backend
+```
+$ cd SudoMovies/Backend
 $ npm install
 $ npm run nodemon
 ```
+
