@@ -10,6 +10,7 @@ const bcrypt = require("bcryptjs");
 const { useInsertionEffect } = require("react");
 const connectToMongo = require("../db"); 
 const fachauser = require('../middleware/fachauser')
+require('dotenv').config();
 let success = false;
 router.post(
   "/creatuser",
@@ -37,7 +38,7 @@ router.post(
         function o(userid) {
           // console.log({userid})
           const date = { userid };
-          const token = jwt.sign(date, "H@rd!k#$110"); 
+          const token = jwt.sign(date, process.env.SOLT); 
           success = true;
           res.json({success, token });
           success = false
@@ -88,7 +89,7 @@ router.post(
       }
 
       const dates = { userid: data[0]._id };
-      const token = jwt.sign(dates, "H@rd!k#$110");
+      const token = jwt.sign(dates, process.env.SOLT);
       success = true
       res.json({success, token });
       success = false
@@ -141,7 +142,7 @@ router.post(
       }
 
       const dates = { userid: data[0]._id };
-      const token = jwt.sign(dates, "H@rd!k#$110");
+      const token = jwt.sign(dates, process.env.SOLT);
       success = true
       res.json({success, token });
       success = false

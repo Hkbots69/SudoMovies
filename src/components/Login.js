@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import "./login.css";
 
 const Login = () => {
   const history = useNavigate();
-  useEffect(()=>{
+
+  useEffect(() => {
     if (localStorage.getItem("token")) {
       history('/home');
     }
-  },[]);
+  }, []);
  
   const [loginData, setLogindata] = useState({ email: "", passwd: "" });
 
@@ -19,28 +19,27 @@ const Login = () => {
       "Accept": "*/*",
       "User-Agent": "Thunder Client (https://www.thunderclient.com)",
       "Content-Type": "application/json"
-     }
+    };
      
-     let bodyContent = JSON.stringify({
-       "email": loginData.email,
-       "passwd": loginData.passwd
-     });
+    let bodyContent = JSON.stringify({
+      "email": loginData.email,
+      "passwd": loginData.passwd
+    });
      
-     let response = await fetch("https://sudomovies.ml/api/auth/login", { 
-       method: "POST",
-       body: bodyContent,
-       headers: headersList
-     });
+    let response = await fetch( "api/auth/login", { 
+      method: "POST",
+      body: bodyContent,
+      headers: headersList
+    });
      
-     let data = await response.json();
-    //  console.log(data);
-     if (data.success) {
-        localStorage.setItem('token',data.token);
-        history('/home');
-     }else{
-        document.getElementById("msg").innerHTML = data.message;
-     }
-     
+    let data = await response.json();
+    
+    if (data.success) {
+      localStorage.setItem('token', data.token);
+      history('/home');
+    } else {
+      document.getElementById("msg").innerHTML = data.message;
+    }
   };
 
   const onChange = (e) => {
@@ -53,9 +52,7 @@ const Login = () => {
         <div className="container2">
           <span className="animated tada" id="msg"></span>
           <form name="form1" className="box" method="post" onSubmit={loginSubmit}>
-            <h4>
-              Login
-            </h4>
+            <h4>Login</h4>
             <h5>Sign in to your account.</h5>
             <input
               type="text"
@@ -69,16 +66,16 @@ const Login = () => {
             <input
               type="password"
               name="passwd"
-              placeholder="Passsword"
+              placeholder="Password"
               id="pwd"
               required
-              autocomplete="off"
+              autoComplete="off"
               value={loginData.passwd}
               onChange={onChange}
             />
             <input type="submit" value="Login" className="btn1" />
           </form>
-          <Link  to="/singup" className="dnthave">
+          <Link to="/signup" className="dnthave">
             Don’t have an account? Sign up
           </Link>
         </div>

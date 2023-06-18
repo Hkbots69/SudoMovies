@@ -19,7 +19,7 @@ export function MovieProvider({ children }) {
       "auth-token": localStorage.getItem('token')
      }
      
-     let data = await fetch("https://sudomovies.ml/api/movies/getmovie", { 
+     let data = await fetch(process.env.SERVER_URL+"api/movies/getmovie", { 
        method: "GET",
        headers: headersList
      });
