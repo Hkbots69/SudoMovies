@@ -35,7 +35,7 @@ function Singup() {
     });
     // console.log(bodyContent);
 
-    let response = await fetch("https://sudomovies.ml/api/auth/creatuser", {
+    let response = await fetch(process.env.SERVER_URL+"/api/auth/creatuser", {
       method: "POST",
       mode: "cors",
       body: bodyContent,

@@ -58,7 +58,7 @@ const Details = () => {
       "auth-token": localStorage.getItem("token")
     };
 
-    let response = await fetch("http://18.234.35.72/api/tokens/cutoken", {
+    let response = await fetch(process.env.SERVER_URL+"/api/tokens/cutoken", {
       method: "PUT",
       headers: headersList,
     });
