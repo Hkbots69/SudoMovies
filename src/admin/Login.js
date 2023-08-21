@@ -26,7 +26,7 @@ const Login = () => {
        "passwd": loginData.passwd
      });
      
-     let response = await fetch("https://sudomovies.ml/api/auth/admin", { 
+     let response = await fetch(process.env.SERVER_URL+"/api/auth/admin", { 
        method: "POST",
        body: bodyContent,
        headers: headersList
