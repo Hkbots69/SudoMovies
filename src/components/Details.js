@@ -58,7 +58,7 @@ const Details = () => {
       "auth-token": localStorage.getItem("token")
     };
 
-    let response = await fetch(process.env.SERVER_URL+"/api/tokens/cutoken", {
+    let response = await fetch("https://sudomovies-backend.onrender.com/api/tokens/cutoken", {
       method: "PUT",
       headers: headersList,
     });

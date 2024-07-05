@@ -26,7 +26,7 @@ const Login = () => {
       "passwd": loginData.passwd
     });
      
-    let response = await fetch(process.env.SERVER_URL+ "/api/auth/login", { 
+    let response = await fetch("https://sudomovies-backend.onrender.com/api/auth/login", { 
       method: "POST",
       body: bodyContent,
       headers: headersList

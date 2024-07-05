@@ -16,7 +16,7 @@ const Dashboard = () => {
     const mm = document.getElementById("moveinfo").value
     console.log(mm)
 
-    let response = await fetch(process.env.SERVER_URL+"/api/movies/addmoves", {
+    let response = await fetch("https://sudomovies-backend.onrender.com/api/movies/addmoves", {
       method: "POST",
       body: mm,
       headers: headersList,
